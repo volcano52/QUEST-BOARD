@@ -1,0 +1,21 @@
+public class MainApp {
+    public static void main(String[] args) {
+
+        // Fake members
+        Member m1 = new Member("M001", "Mighty", "mighty@email.com", "2024-01-01");
+        Member m2 = new Member("M002", "Thabo", "thabo@email.com", "2024-01-01");
+
+        // Fake transactions
+        Contributions contributions = new Contributions();
+        contributions.addTransaction(new Transaction("T001", "M001", 500.0, "contribution", "2024-02-01"));
+        contributions.addTransaction(new Transaction("T002", "M002", 500.0, "contribution", "2024-02-01"));
+        contributions.addTransaction(new Transaction("T003", "M001", 500.0, "contribution", "2024-03-01"));
+
+        // Wire everything else
+        Calculations calc = new Calculations(contributions);
+        Account account = new Account(calc);
+        Tracker tracker = new Tracker(contributions);
+        Menu menu = new Menu(account, tracker, contributions);
+
+        menu.start();
+    }

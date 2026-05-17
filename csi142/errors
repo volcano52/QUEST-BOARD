@@ -1,0 +1,196 @@
+PS C:\Users\crazy\Documents\Varisty Things\csi 142\The_Citadel-main> javac src/com/ub/csi142/*.java
+src\com\ub\csi142\Accounts.java:7: error: class Account is public, should be declared in a file named Account.java
+public class Account {
+       ^
+src\com\ub\csi142\MainApp1.java:3: error: class MainApp is public, should be declared in a file named MainApp.java
+public class MainApp {
+       ^
+src\com\ub\csi142\Accounts.java:3: error: cannot find symbol
+import src.com.ub.csi142.Members;
+                        ^
+  symbol:   class Members
+  location: package src.com.ub.csi142
+src\com\ub\csi142\Accounts.java:29: error: cannot find symbol
+        System.out.println("  Member  : " + found.getName() + " (ID: " + memberId + ")");
+                                                 ^
+  symbol:   method getName()
+  location: variable found of type Member
+src\com\ub\csi142\Accounts.java:34: error: cannot find symbol
+        ArrayList<Double> transactions = found.getTransactions();
+                                              ^
+  symbol:   method getTransactions()
+  location: variable found of type Member
+src\com\ub\csi142\Accounts.java:49: error: cannot find symbol
+            double percentIncrease = Calculations.percentageIncrease(oldTotal, amount);
+                                                 ^
+  symbol:   method percentageIncrease(double,double)
+  location: class Calculations
+src\com\ub\csi142\Accounts.java:56: error: cannot find symbol
+        System.out.printf("  %-21s $%.2f%n", "Total:", found.getTotalContributed());
+                                                            ^
+  symbol:   method getTotalContributed()
+  location: variable found of type Member
+src\com\ub\csi142\Accounts.java:66: error: cannot find symbol
+            showMemberActivity(m.getMemberId());
+                                ^
+  symbol:   method getMemberId()
+  location: variable m of type Member
+src\com\ub\csi142\Accounts.java:77: error: cannot find symbol
+        double groupTotal = Calculations.totalContributions(members);
+                                        ^
+  symbol:   method totalContributions(ArrayList<Member>)
+  location: class Calculations
+src\com\ub\csi142\Accounts.java:87: error: cannot find symbol
+            double share = Calculations.memberSharePercent(m, members);
+                                       ^
+  symbol:   method memberSharePercent(Member,ArrayList<Member>)
+  location: class Calculations
+src\com\ub\csi142\Accounts.java:89: error: cannot find symbol
+                    m.getMemberId(),
+                     ^
+  symbol:   method getMemberId()
+  location: variable m of type Member
+src\com\ub\csi142\Accounts.java:90: error: cannot find symbol
+                    m.getName(),
+                     ^
+  symbol:   method getName()
+  location: variable m of type Member
+src\com\ub\csi142\Accounts.java:91: error: cannot find symbol
+                    m.getTotalContributed(),
+                     ^
+  symbol:   method getTotalContributed()
+  location: variable m of type Member
+src\com\ub\csi142\Accounts.java:102: error: cannot find symbol
+            if (m.getMemberId() == memberId) return m;
+                 ^
+  symbol:   method getMemberId()
+  location: variable m of type Member
+src\com\ub\csi142\MainApp1.java:6: error: incompatible types: String cannot be converted to int
+        Member m1 = new Member("38946543", "Volcano Kgaboitsile", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:7: error: incompatible types: String cannot be converted to int
+        Member m2 = new Member("10375356", "Constanance Xhosi", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:8: error: incompatible types: String cannot be converted to int
+        Member m3 = new Member("32753457", "Reverence Sechele", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:9: error: incompatible types: String cannot be converted to int
+        Member m4 = new Member("01653658", "Zambanzi Rotholi", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:10: error: incompatible types: String cannot be converted to int
+        Member m5 = new Member("98467690", "Justice Ngabe", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:11: error: incompatible types: String cannot be converted to int
+        Member m6 = new Member("12345678", "Elijah Ambonosee", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:12: error: incompatible types: String cannot be converted to int
+        Member m7 = new Member("57896278", "Police Kelechi", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:13: error: incompatible types: String cannot be converted to int
+        Member m8 = new Member("43979873", "Terrence Lethonogonolo", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:14: error: incompatible types: String cannot be converted to int
+        Member m9 = new Member("28756839", "Miracle Obane", "2026-01-01");
+                               ^
+src\com\ub\csi142\MainApp1.java:15: error: incompatible types: String cannot be converted to int
+        Member m10 = new Member("91863514", "Faith Ndobe", "2026-01-01");
+                                ^
+src\com\ub\csi142\MainApp1.java:61: error: constructor Calculations in class Calculations cannot be applied to given types;
+        Calculations calc = new Calculations(contributions);
+                            ^
+  required: no arguments
+  found:    Contributions
+  reason: actual and formal argument lists differ in length
+src\com\ub\csi142\MainApp1.java:62: error: constructor Account in class Account cannot be applied to given types;
+        Account account = new Account(calc);
+                          ^
+  required: String,ArrayList<Member>
+  found:    Calculations
+  reason: actual and formal argument lists differ in length
+src\com\ub\csi142\MainApp1.java:64: error: constructor Menu in class Menu cannot be applied to given types;
+        Menu menu = new Menu(account, tracker, contributions);
+                    ^
+  required: no arguments
+  found:    Account,Tracker,Contributions
+  reason: actual and formal argument lists differ in length
+src\com\ub\csi142\MainApp1.java:66: error: cannot find symbol
+        menu.start();
+            ^
+  symbol:   method start()
+  location: variable menu of type Menu
+src\com\ub\csi142\Menu.java:36: error: cannot find symbol
+                    for (Member m : Member.members) {
+                                          ^
+  symbol:   variable members
+  location: class Member
+src\com\ub\csi142\Menu.java:37: error: cannot find symbol
+                        if (m.getMemberId() == id) { target = m; break; }
+                             ^
+  symbol:   method getMemberId()
+  location: variable m of type Member
+src\com\ub\csi142\Menu.java:52: error: cannot find symbol
+                    Account.run(Member.members);
+                                      ^
+  symbol:   variable members
+  location: class Member
+src\com\ub\csi142\Menu.java:56: error: cannot find symbol
+                    if (Member.members.isEmpty()) {
+                              ^
+  symbol:   variable members
+  location: class Member
+src\com\ub\csi142\Menu.java:59: error: cannot find symbol
+                        for (Member m : Member.members) {
+                                              ^
+  symbol:   variable members
+  location: class Member
+src\com\ub\csi142\Menu.java:60: error: cannot find symbol
+                            System.out.println("\n" + m.getName() + " ? transactions: "
+                                                       ^
+  symbol:   method getName()
+  location: variable m of type Member
+src\com\ub\csi142\Menu.java:61: error: cannot find symbol
+                                    + m.getTransactions());
+                                       ^
+  symbol:   method getTransactions()
+  location: variable m of type Member
+src\com\ub\csi142\Menu.java:68: error: cannot find symbol
+                    Account account = new Account("Group Savings", Member.members);
+                                                                         ^
+  symbol:   variable members
+  location: class Member
+src\com\ub\csi142\Tracker.java:20: error: cannot find symbol
+           if(getMember().getID().equals(memberId) ){
+                                         ^
+  symbol:   variable memberId
+  location: class Tracker
+src\com\ub\csi142\Tracker.java:20: error: cannot find symbol
+           if(getMember().getID().equals(memberId) ){
+              ^
+  symbol:   method getMember()
+  location: class Tracker
+src\com\ub\csi142\Tracker.java:21: error: no suitable method found for add(no arguments)
+               result.add();
+                     ^
+    method List.add(Transaction) is not applicable
+      (actual and formal argument lists differ in length)
+    method List.add(int,Transaction) is not applicable
+      (actual and formal argument lists differ in length)
+src\com\ub\csi142\Tracker.java:30: error: cannot find symbol
+        for ( Transaction t : contributions.getTranscations()){
+                                           ^
+  symbol:   method getTranscations()
+  location: variable contributions of type Contributions
+src\com\ub\csi142\Tracker.java:44: error: no suitable method found for add(no arguments)
+                result.add();
+                      ^
+    method List.add(Transaction) is not applicable
+      (actual and formal argument lists differ in length)
+    method List.add(int,Transaction) is not applicable
+      (actual and formal argument lists differ in length)
+src\com\ub\csi142\Tracker.java:67: error: cannot find symbol
+        for ( Transaction t : tranactions ){
+                              ^
+  symbol:   variable tranactions
+  location: class Tracker
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+42 errors
